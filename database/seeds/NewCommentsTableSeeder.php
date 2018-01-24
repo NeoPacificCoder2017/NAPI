@@ -1,10 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 use App\newComment;
-
-class newCommmentsTableSeeder extends Seeder
+class NewCommentsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,8 +10,7 @@ class newCommmentsTableSeeder extends Seeder
      * @return void
      */
     public function run()
-    {
-        //
+    { //
         $newComments = [];
 
         for($i = 0; $i < 10; $i++):
