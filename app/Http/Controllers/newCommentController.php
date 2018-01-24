@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\newComment;
 
-class newCommentControler extends Controller
+class newCommentController extends Controller
 {
     //
     public function all(){
@@ -32,12 +32,11 @@ class newCommentControler extends Controller
         $input = $request->all();
         
         $comment = new newComment();
-        $comment->user_id = $input['new_id'];
+        $comment->new_id = $input['new_id'];
         $comment->user_id = $input['user_id'];
         $comment->comment = $input['comment'];
         $comment->save();
         
 
     }
-
 }
