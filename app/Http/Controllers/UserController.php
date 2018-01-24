@@ -29,6 +29,7 @@ class UserController extends Controller
         $users ->lastname = $input['lastname'];
         $users ->firstname = $input['firstname'];
         $users ->pseudo = $input['pseudo'];
+        $users ->profile_type_id = $input['profile_type_id'];
         $users ->birthday = $input['birthday'];
         $users ->email = $input['email'];
         $users ->password = $input['password'];
