@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use App\newComment;
 
 class newCommmentsTableSeeder extends Seeder
 {
@@ -31,7 +33,7 @@ class newCommmentsTableSeeder extends Seeder
 
         foreach ($newComments AS $newComment):
 
-            newComment::create($newComments);
+            newComment::create($newComment);
 
         endforeach;
         
