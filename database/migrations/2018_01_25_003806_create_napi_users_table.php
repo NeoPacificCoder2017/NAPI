@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUserTable extends Migration
+class CreateNapiUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,13 +15,17 @@ class CreateUserTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id')->unique();
-            $table->string('name');
+            $table->string('lastname');
+            $table->string('firstname');
+            $table->string('pseudo');
+            $table->integer('profile_type_id');
+            $table->date('birthday');
             $table->string('email')->unique();
             $table->string('password');
-            $table->rememberToken();
             $table->timestamps();
         });
     }
+
     /**
      * Reverse the migrations.
      *
