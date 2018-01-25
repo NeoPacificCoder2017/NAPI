@@ -4,22 +4,28 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Foundation\Auth\RegistersUsers;
 use App\User;
 
 
 class UserController extends Controller
 {
-//     public function __construct()
-//   {
-//       $this->middleware('auth');
-//   }
+    public function __construct()
+  {
+      $this->middleware('auth');
+  }
 
 
     public function all(){
         $users = User::all();
         return view('users.users', ['users' => $users]);
-    //   $users = User::all()->where('user_type_id',$user->user_type_id);
+    //   $users = User::all()->where('profile_type_id',$user->user_type_id);
     //   return view('users.users',['users' => $users]);
+    }
+
+    public function index(){
+        return view('')
     }
 
     public function show($userId){
@@ -40,7 +46,7 @@ class UserController extends Controller
         $users ->profile_type_id = $input['profile_type_id'];
         $users ->birthday = $input['birthday'];
         $users ->email = $input['email'];
-        $users ->password = $input['password'];
+        $users ->password = bcrypt($input['password']);
         $users ->save();
 
         return view('users.user-create-confirmation');

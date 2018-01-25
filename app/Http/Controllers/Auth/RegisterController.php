@@ -51,8 +51,8 @@ class RegisterController extends Controller
             'lastname' => 'required|string|max:255',
             'firstname' => 'required|string|max:255',
             'pseudo' => 'required|string|max:255',
-            'profile_type_id' => 'required|integer|max:1',
-            'birthday' => 'required|date|max:20',
+            'profile_type_id' => 'required|string|max:5',
+            'birthday' => 'required|string|max:255',
             'email' => 'required|string|email|max:255',
             'password' => 'required|string|min:4|confirmed',
         ]);
