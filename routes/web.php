@@ -20,10 +20,6 @@ Route::get('user/new', 'UserController@new');
 Route::get('user/{userId}', 'UserController@show');
 Route::post('user', 'UserController@create');
 Route::get('user/{userId}/delete', 'UserController@destroy');
-//Route::get('users', 'UserController@all');
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 
