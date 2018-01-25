@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use App\Categorys;
+use App\Category;
 
 class CategorysTableSeeder extends Seeder
 {
@@ -14,22 +14,17 @@ class CategorysTableSeeder extends Seeder
     public function run()
     {
         //
-        Schema::create('categorys', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name');
-            
-            $table->timestamps();
-        });
-    }
+        $categorys = [];
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-        Schema::dropIfExists('categorys');
-    }
+        for($i = 0; $i < 10; $i++):
+            
+            $categorys[] = [
+                'name'=> str_random(10),
+            ];
+        endfor;
+
+        foreach($categorys AS $category):
+            Categorys::create($category);
+        endforeach;
     }
 }
