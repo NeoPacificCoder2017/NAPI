@@ -9,7 +9,7 @@
         <thead>
           <tr>
             <th>check</th>
-            <th>#id</th>
+            <th>#</th>
             <th>#new</th>
             <th>#user</th>
             <th>Commentaire</th>
@@ -26,8 +26,8 @@
               <td>{{ $comment->user_id }}</td>
               <td>{{ $comment->comment }}</td>
               <td>
-                <a href="comment/{{$comment->id}}/edit')}}" button class="btn btn-default btn-small btn-detail">Edit</a>
-                <a href="comment/{{$comment->id}}/delete" button class="btn btn-danger btn-small btn-delete">Delete</a>
+                <a href="comment/{{$comment->id}}/edit')}}" button class="btn btn-default btn-sm btn-detail">Edit</a>
+                <a href="comment/{{$comment->id}}/delete" button class="btn btn-danger btn-sm btn-delete sma">Delete</a>
               </td>
             </tr>
           @endforeach
@@ -37,7 +37,7 @@
               Action
             </button>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="comment/{{$comment->id}}/delete">delete</a>
               <a class="dropdown-item" href="#">Another action</a>
               <a class="dropdown-item" href="#">Something else here</a>
               <div class="dropdown-divider"></div>

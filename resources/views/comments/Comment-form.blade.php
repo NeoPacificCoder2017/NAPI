@@ -11,11 +11,9 @@
                 </div>
                 <select class="custom-select" id="inputGroupSelect01">
                     <option selected>Choose...</option>
-                    {{--  @foreach($comments AS $comment)  --}}
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                    {{--  @endforeach  --}}
+                    
+                        <option value="">{{ $comments->new_id }}</option>
+                    
                 </select>
             </div>
         </div>
@@ -24,12 +22,12 @@
         <div class="col-6 col-md6">
             <h5>Commentaire</h5>
             <div class="input-group">
-                <textarea class="form-control" aria-label="With textarea"></textarea>
+                <textarea class="form-control" aria-label="With textarea">{{ $comments->comment }}</textarea>
             </div>
         </div>
     </div>
     <div class="row justify-content-center pt-5">
-        <input class="btn btn-success" type="submit" value="Commenter">
+        <a href="comments/create" class="btn btn-success m-3 float-right">Ajouter</a>
     </div>
 </div>
 @endsection
