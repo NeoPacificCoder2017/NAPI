@@ -26,12 +26,10 @@
               <td>{{ $comment->user_id }}</td>
               <td>{{ $comment->comment }}</td>
               <td>
-              
-                
             </tr>
           @endforeach
-          <a href="comments/new" class="btn btn-success right btn-sm m-3">Nouveau commentaire</a>
-          <div class="btn-group">
+          <a href="comments/new" class="btn btn-success right btn-sm m-3 float-right">Nouveau commentaire</a>
+          <div class="btn-group pt-3">
             <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Action
             </button>
