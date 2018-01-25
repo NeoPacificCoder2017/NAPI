@@ -57,7 +57,7 @@
                             <label for="profile_type_id" class="col-md-4 control-label">Profile_type_id</label>
 
                             <div class="col-md-6">
-                                <input id="profile_type_id" type="text" class="form-control" name="firstname" value="{{ old('profile_type_id') }}" required autofocus>
+                                <input id="profile_type_id" type="text" class="form-control" name="profile_type_id" value="{{ old('profile_type_id') }}" required autofocus>
 
                                 @if ($errors->has('profile_type_id'))
                                     <span class="help-block">
@@ -71,7 +71,7 @@
                             <label for="birthday" class="col-md-4 control-label">Birthday</label>
 
                             <div class="col-md-6">
-                                <input id="birthday" type="text" class="form-control" name="firstname" value="{{ old('birthday') }}" required autofocus>
+                                <input id="birthday" type="text" class="form-control" name="birthday" value="{{ old('birthday') }}" required autofocus>
 
                                 @if ($errors->has('birthday'))
                                     <span class="help-block">

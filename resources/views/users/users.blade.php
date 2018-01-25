@@ -1,9 +1,9 @@
 @extends('users.template')
 
 @section('contenu')
-<h2>NAPI-Les utilisateurs</h2>
-  <div class="col-sm-offset-3 col-sm-6">
+  <div class="col-sm-offset-1 col-sm-9">
 	  <div class="panel panel-success">
+    <h2>NAPI-Les utilisateurs</h2>
       <table class="table">
         <thead>
           <tr>
