@@ -9,9 +9,17 @@ use App\User;
 
 class UserController extends Controller
 {
+//     public function __construct()
+//   {
+//       $this->middleware('auth');
+//   }
+
+
     public function all(){
         $users = User::all();
         return view('users.users', ['users' => $users]);
+    //   $users = User::all()->where('user_type_id',$user->user_type_id);
+    //   return view('users.users',['users' => $users]);
     }
 
     public function show($userId){
