@@ -1,17 +1,19 @@
 @extends('template')
 
 @section('contenu')
-<h2 class="text-center">NAPI-Les commentaires</h2>
-  <div class="col-sm-offset-3 col-sm-6">
-	  <div class="panel panel-body">
-      <table class="table">
+<div class="container"> 
+  <h2 class="text-center pt-3">NAPI-Liste des commentaires</h2>
+  <div class="row justify-content-center">
+	  <div class="col-10 col-md6">
+      <table class="table table-striped table-dark">
         <thead>
           <tr>
             <th>check</th>
             <th>#id</th>
             <th>new</th>
             <th>user</th>
-            <th>comment</th>
+            <th>Commentaire</th>
+            <th>Action</th>
             
           </tr>
         </thead>
@@ -23,14 +25,16 @@
               <td>{{ $comment->new_id }}</td>
               <td>{{ $comment->user_id }}</td>
               <td>{{ $comment->comment }}</td>
+              <td>
               
                 
             </tr>
           @endforeach
-          <a href="comments/new" button class="btn btn-success pull-right btn-small"></a>
-          {{--  <button action="comments/new" type="button" class="btn btn-default navbar-btn">ajouter un commantaire</button>  --}}
+          <a href="comments/new" class="btn btn-success right btn-sm m-3">News comments</a>
+          {{--  <button action="comments/new" type="button" class="btn btn-default navbar-btn m-3">ajouter un commantaire</button>  --}}
         </tbody>
       </table>
     </div>
   </div>
+</div>
 @endsection
