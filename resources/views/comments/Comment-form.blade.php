@@ -11,11 +11,11 @@
                 </div>
                 <select class="custom-select" id="inputGroupSelect01">
                     <option selected>Choose...</option>
-                    <option value="1"></option>
-                    <option value="2"></option>
-                    <option value="3"></option>
-                    {{--  @foreach($comments AS $comment)
-                    @endforeach  --}}
+                    {{--  @foreach($comments AS $comment)  --}}
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    {{--  @endforeach  --}}
                 </select>
             </div>
         </div>
@@ -27,6 +27,9 @@
                 <textarea class="form-control" aria-label="With textarea"></textarea>
             </div>
         </div>
+    </div>
+    <div class="row justify-content-center pt-5">
+        <input class="btn btn-success" type="submit" value="Commenter">
     </div>
 </div>
 @endsection

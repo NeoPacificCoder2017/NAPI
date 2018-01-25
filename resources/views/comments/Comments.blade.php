@@ -26,9 +26,12 @@
               <td>{{ $comment->user_id }}</td>
               <td>{{ $comment->comment }}</td>
               <td>
+                <a href="comment/{{$comment->id}}/edit')}}" button class="btn btn-default btn-small btn-detail">Edit</a>
+                <a href="comment/{{$comment->id}}/delete" button class="btn btn-danger btn-small btn-delete">Delete</a>
+              </td>
             </tr>
           @endforeach
-          <a href="comments/new" class="btn btn-success right btn-sm m-3 float-right">Nouveau commentaire</a>
+          <a href="comments/new" class="btn btn-success btn-sm m-3 float-right">Nouveau commentaire</a>
           <div class="btn-group pt-3">
             <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Action
