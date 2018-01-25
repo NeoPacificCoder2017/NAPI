@@ -1,7 +1,7 @@
 @extends('template')
 
 @section('contenu')
-<h2>NAPI-Les utilisateurs</h2>
+<h2>NAPI-Les commentaires</h2>
   <div class="col-sm-offset-3 col-sm-6">
 	  <div class="panel panel-info">
       <table class="table">
