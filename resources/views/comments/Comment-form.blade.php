@@ -11,9 +11,7 @@
                 </div>
                 <select class="custom-select" id="inputGroupSelect01">
                     <option selected>Choose...</option>
-                    
-                        <option value="">{{ $comments->new_id }}</option>
-                    
+                    <option value="">{{ $comments->new_id }}</option>
                 </select>
             </div>
         </div>
