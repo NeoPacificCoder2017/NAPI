@@ -10,8 +10,8 @@
           <tr>
             <th>check</th>
             <th>#id</th>
-            <th>new</th>
-            <th>user</th>
+            <th>#new</th>
+            <th>#user</th>
             <th>Commentaire</th>
             <th>Action</th>
             
@@ -30,7 +30,19 @@
                 
             </tr>
           @endforeach
-          <a href="comments/new" class="btn btn-success right btn-sm m-3">News comments</a>
+          <a href="comments/new" class="btn btn-success right btn-sm m-3">Nouveau commentaire</a>
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Action
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+          </div>
           {{--  <button action="comments/new" type="button" class="btn btn-default navbar-btn m-3">ajouter un commantaire</button>  --}}
         </tbody>
       </table>

@@ -2,39 +2,31 @@
 
 @section('contenu')
 <div class="container"> 
-  <h2 class="text-center pt-3">Nouveau commentaire</h2>
-  <div class="row justify-content-center">
-	  <div class="col-10 col-md6">
-      <table class="table table-striped table-dark">
-        <thead>
-          <tr>
-            <th>check</th>
-            <th>#id</th>
-            <th>new</th>
-            <th>user</th>
-            <th>Commentaire</th>
-            <th>Action</th>
-            
-          </tr>
-        </thead>
-        <tbody>
-          {{--  @foreach($comments AS $comment)
-            <tr>
-              <td><input type="checkbox" name="checkbox"/></td>
-              <td>#{{ $comment->id }}</td>
-              <td>{{ $comment->new_id }}</td>
-              <td>{{ $comment->user_id }}</td>
-              <td>{{ $comment->comment }}</td>
-              <td>
-              
-                
-            </tr>
-          @endforeach  --}}
-          <a href="comments/new" class="btn btn-success right btn-sm m-3">News comments</a>
-          {{--  <button action="comments/new" type="button" class="btn btn-default navbar-btn m-3">ajouter un commantaire</button>  --}}
-        </tbody>
-      </table>
+    <h2 class="text-center p-4">Nouveau commentaire</h2>
+    <div class="row justify-content-center p-3">
+        <div class="col-4 col-md6">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text btn-primary" for="inputGroupSelect01">News</label>
+                </div>
+                <select class="custom-select" id="inputGroupSelect01">
+                    <option selected>Choose...</option>
+                    <option value="1"></option>
+                    <option value="2"></option>
+                    <option value="3"></option>
+                    {{--  @foreach($comments AS $comment)
+                    @endforeach  --}}
+                </select>
+            </div>
+        </div>
     </div>
-  </div>
+    <div class="row justify-content-center pt-3">
+        <div class="col-6 col-md6">
+            <h5>Commentaire</h5>
+            <div class="input-group">
+                <textarea class="form-control" aria-label="With textarea"></textarea>
+            </div>
+        </div>
+    </div>
 </div>
 @endsection
