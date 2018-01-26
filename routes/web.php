@@ -14,6 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('news', 'NewController@all');
+Route::get('news/new','NewController@new');
+Route::get('news/{userId}', 'NewController@show');
+Route::post('news','NewController@create');
+Route::get('news/{userId}/delete', 'NewController@destroy');
 
 Auth::routes();
 
