@@ -1300,6 +1300,7 @@ class ComposerStaticInit798eaf1f735de576642a79c939a88cbf
         'Illuminate\\Foundation\\Auth\\Access\\AuthorizesRequests' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Auth/Access/AuthorizesRequests.php',
         'Illuminate\\Foundation\\Auth\\AuthenticatesUsers' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php',
         'Illuminate\\Foundation\\Auth\\RedirectsUsers' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Auth/RedirectsUsers.php',
+        'Illuminate\\Foundation\\Auth\\RegistersAdmins' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Auth/RegistersAdmins.php',
         'Illuminate\\Foundation\\Auth\\RegistersUsers' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Auth/RegistersUsers.php',
         'Illuminate\\Foundation\\Auth\\ResetsPasswords' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Auth/ResetsPasswords.php',
         'Illuminate\\Foundation\\Auth\\SendsPasswordResetEmails' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Auth/SendsPasswordResetEmails.php',

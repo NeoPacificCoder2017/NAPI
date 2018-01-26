@@ -989,6 +989,7 @@ return array(
     'Illuminate\\Foundation\\Auth\\Access\\AuthorizesRequests' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Auth/Access/AuthorizesRequests.php',
     'Illuminate\\Foundation\\Auth\\AuthenticatesUsers' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php',
     'Illuminate\\Foundation\\Auth\\RedirectsUsers' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Auth/RedirectsUsers.php',
+    'Illuminate\\Foundation\\Auth\\RegistersAdmins' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Auth/RegistersAdmins.php',
     'Illuminate\\Foundation\\Auth\\RegistersUsers' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Auth/RegistersUsers.php',
     'Illuminate\\Foundation\\Auth\\ResetsPasswords' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Auth/ResetsPasswords.php',
     'Illuminate\\Foundation\\Auth\\SendsPasswordResetEmails' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Auth/SendsPasswordResetEmails.php',

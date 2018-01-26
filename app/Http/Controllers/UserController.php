@@ -19,13 +19,18 @@ class UserController extends Controller
 
     public function all(){
         $users = User::all();
+        // dump($users);
         return view('users.users', ['users' => $users]);
-    //   $users = User::all()->where('profile_type_id',$user->user_type_id);
+    //   $users = User::all() ->profile_type_id;
+    //   if($users == 1):
     //   return view('users.users',['users' => $users]);
+    //   else:
+    //     return("Vous n'avez pas accés a ces informations");
+    //   endif;
     }
 
     public function index(){
-        return view('')
+        return view('');
     }
 
     public function show($userId){

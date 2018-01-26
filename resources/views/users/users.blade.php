@@ -1,8 +1,9 @@
 @extends('users.template')
 
 @section('contenu')
-  <div class="col-sm-offset-1 col-sm-9">
-	  <div class="panel panel-success">
+  <div class="container">
+    <div class="col-sm-12">
+	  <div class="panel panel-info">
     <h2>NAPI-Les utilisateurs</h2>
       <table class="table">
         <thead>
@@ -32,8 +33,8 @@
               <td>{{ $user->email }}</td>
               <td>{{ $user->password }}</td>
                 <td>
-                  <a href="user/{{$user->id}}/edit')}}" button class="btn btn-default btn-small btn-detail"><span class="glyphicon glyphicon-eye-open"></span></a>
-                  <a href="user/{{$user->id}}/delete" button class="btn btn-danger btn-small btn-delete"><span class="glyphicon glyphicon-trash"></span></a>
+                  <a href="user/{{$user->id}}/edit" button class="btn btn-success btn-small btn-detail">Edit</a>
+                  <a href="user/{{$user->id}}/delete" button class="btn btn-danger btn-small btn-delete">Delete</a>
                 </td>
             </tr>
           @endforeach
@@ -41,5 +42,6 @@
         </tbody>
       </table>
     </div>
+  </div>
   </div>
 @endsection
