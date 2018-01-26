@@ -22,4 +22,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('categorys','CategoryController@getAll');
 Route::get('categorys/activated','CategoryController@getAllActivated');
-Route::get('categorys/{categoryId}','CategoryController@geditCategory');
+Route::get('categorys/{categoryId}','CategoryController@editCategory');

@@ -2,21 +2,25 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use App\Category;
 
 class CategoryController extends Controller
 {
     //
     public function getAll(){
-        return view('Categorys.Categorys');
+        $categorys = Category::all();
+        
+
+        return view('Categorys.Categorys',['categorys'=>$categorys]);
     }
 
     public function getAllActivated(){
         return view('Categorys.Categorys');
     }
 
-    public function editCateegory(){
+    public function editCategory($categoryId){
         return view('Categorys.Category-edit');
     }
 
