@@ -4,9 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Categorys;
 
-class CategorysController extends Controller
+class CategoryController extends Controller
 {
     //
 }

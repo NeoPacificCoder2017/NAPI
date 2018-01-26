@@ -1,10 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 use App\Category;
-
-class CategorysTableSeeder extends Seeder
+class CategoryTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -24,7 +22,7 @@ class CategorysTableSeeder extends Seeder
         endfor;
 
         foreach($categorys AS $category):
-            Categorys::create($category);
+            Category::create($category);
         endforeach;
     }
 }
