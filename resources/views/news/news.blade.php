@@ -2,10 +2,10 @@
 
 @section('contenu')
   <div class="container">
-    <div class="col-sm-12">
+    <div class="col-lg-12">
 	  <div class="panel panel-info">
-    <h2>NAPI-Les actualitées</h2>
-      <table class="table">
+    <div class="panel-heading">NAPI Les actualitées</div>
+      <table class="table table-striped">
         <thead>
           <tr>
             <th>#</th>
@@ -34,8 +34,8 @@
               <td>{{ $new->publish }}</td>
               <td>{{ $new->published_by }}</td>
                 <td>
-                  <a href="user/{{$new->id}}/edit" button class="btn btn-success btn-small btn-detail">Edit</a>
-                  <a href="user/{{$new->id}}/delete" button class="btn btn-danger btn-small btn-delete">Delete</a>
+                  <a href="news/{{$new->id}}/edit" button class="btn btn-success btn-small btn-detail">Edit</a>
+                  <a href="news/{{$new->id}}/delete" button class="btn btn-danger btn-small btn-delete">Delete</a>
                 </td>
             </tr>
           @endforeach

@@ -16,9 +16,9 @@ Route::get('/', function () {
 });
 Route::get('news', 'NewController@all');
 Route::get('news/new','NewController@new');
-Route::get('news/{userId}', 'NewController@show');
-Route::post('news','NewController@create');
-Route::get('news/{userId}/delete', 'NewController@destroy');
+Route::get('news/{newsId}', 'NewController@show');
+Route::post('new','NewController@create');
+Route::get('news/{newsId}/delete', 'NewController@destroy');
 
 Auth::routes();
 

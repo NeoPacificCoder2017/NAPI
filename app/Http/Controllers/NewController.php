@@ -48,6 +48,6 @@ class NewController extends Controller
     public function destroy($newsId){
         $news = NewActu::find($newsId);
         $news ->delete();
-        return view('news.news-delete');
+        return view('news.new-delete');
     }
 }
