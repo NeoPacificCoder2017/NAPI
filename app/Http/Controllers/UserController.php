@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use App\User;
+use App\NewActu;
 
 
 class UserController extends Controller
@@ -18,19 +20,16 @@ class UserController extends Controller
 
 
     public function all(){
-        $users = User::all();
-        // dump($users);
-        return view('users.users', ['users' => $users]);
-    //   $users = User::all() ->profile_type_id;
-    //   if($users == 1):
-    //   return view('users.users',['users' => $users]);
-    //   else:
-    //     return("Vous n'avez pas accés a ces informations");
-    //   endif;
-    }
-
-    public function index(){
-        return view('');
+        // $users = User::all();
+        // // dump($users);
+        // return view('users.users', ['users' => $users]);
+        
+        $usertypeid = Auth::user()->profile_type_id;
+        if($usertypeid == 1):
+            return view('users.users',['users' => $users]);
+        else:
+            return("Vous n'avez pas accés a ces informations car vous êtes pas admins");
+        endif;    
     }
 
     public function show($userId){

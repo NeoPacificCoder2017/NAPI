@@ -15,11 +15,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('users', 'UserController@all');
-Route::get('user/new', 'UserController@new');
-Route::get('user/{userId}', 'UserController@show');
-Route::post('user', 'UserController@create');
-Route::get('user/{userId}/delete', 'UserController@destroy');
+Route::get('home/users', 'UserController@all');
+Route::get('home/users/new', 'UserController@new');
+Route::get('home/users/{userId}', 'UserController@show');
+Route::post('home/user', 'UserController@create');
+Route::get('home/users/{userId}/delete', 'UserController@destroy');
+
+Route::get('home/news', 'NewController@all');
+Route::get('home/news/new','NewController@new');
+Route::get('home/news/{newsId}', 'NewController@show');
+Route::post('home/news','NewController@create');
+Route::get('home/news/{newsId}/edit', 'NewController@edit');
+Route::patch('home/news/{newsId}/update', 'NewController@update');
+Route::get('home/news/{newsId}/delete', 'NewController@destroy');
 
 Auth::routes();
 

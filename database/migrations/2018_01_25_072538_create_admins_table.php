@@ -19,6 +19,7 @@ class CreateAdminsTable extends Migration
             $table->string('firstname');
             $table->string('email');
             $table->string('password');
+            $table->integer('profile_type_id');
             $table->rememberToken();
             $table->timestamps();
         });

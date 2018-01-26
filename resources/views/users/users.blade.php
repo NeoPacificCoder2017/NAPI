@@ -1,6 +1,6 @@
-@extends('users.template')
+@extends('layouts.app')
 
-@section('contenu')
+@section('content')
   <div class="container">
     <div class="col-sm-12">
 	  <div class="panel panel-info">

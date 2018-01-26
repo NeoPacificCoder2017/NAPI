@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    {!! Html::style('https://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css') !!}
+		{{--  {!! Html::style('https://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css') !!} --}}
+    {{--  {!! Html::style('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css') !!}  --}}
+   {{--  {!! Html::style('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootst') !!}  --}}
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -28,7 +32,8 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">NAPI | Home</a>
+                    <a class="navbar-brand" href="{{ url('/home') }}">NAPI |</a>
+                    <a class="navbar-brand" href="{{ url('/home/news/new') }}">Nouvel actu</a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">

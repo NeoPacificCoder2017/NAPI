@@ -18,7 +18,7 @@ class CreateNapiUsersTable extends Migration
             $table->string('lastname');
             $table->string('firstname');
             $table->string('pseudo')->unique();
-            $table->integer('profile_type_id')->default(3);
+            $table->string('profile_type_id')->default(2);
             $table->string('birthday');
             $table->string('email')->unique();
             $table->string('password');
