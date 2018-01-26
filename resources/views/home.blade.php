@@ -7,8 +7,8 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Bienvenue sur Napi {{ Auth::User()->pseudo }}</div>
                 <div class="panel-body">
-                    <a href="home/news/new">Créer une nouvel actualité</a><br/>
-                    <a href="home/news">Voir les actualité publier</a>
+                    <a href="home/news">Voir les actualité publier</a><br/>
+                    <a href="home/news/new">Créer une nouvel actualité</a>
                 </div>
                 
             </div>
