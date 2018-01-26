@@ -16,7 +16,7 @@ class NewController extends Controller
 
     public function all(){
         $news = NewActu::all();
-        return view('news.news', ['news' => $news]);
+        return view('news.newsAll', ['news' => $news]);
   
     }
 

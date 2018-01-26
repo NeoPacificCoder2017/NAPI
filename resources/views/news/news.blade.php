@@ -2,10 +2,10 @@
 
 @section('contenu')
   <div class="container">
-    <div class="col-lg-12">
+    <div class="col-sm-12">
 	  <div class="panel panel-info">
     <div class="panel-heading">NAPI Les actualitées</div>
-      <table class="table table-striped">
+      <table class="table table-striped table-light">
         <thead>
           <tr>
             <th>#</th>
