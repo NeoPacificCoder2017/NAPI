@@ -9,15 +9,15 @@ class CategoryController extends Controller
 {
     //
     public function getAll(){
-        return view('categorys.list');
+        return view('Categorys.Categorys');
     }
 
     public function getAllActivated(){
-        return view('categorys.list');
+        return view('Categorys.Categorys');
     }
 
     public function editCateegory(){
-        return view('categorys.list');
+        return view('Categorys.Category-edit');
     }
 
 }
