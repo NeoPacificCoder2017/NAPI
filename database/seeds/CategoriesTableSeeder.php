@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use App\Category;
-class CategorysTableSeeder extends Seeder
+class CategoriesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,16 +13,16 @@ class CategorysTableSeeder extends Seeder
     public function run()
     {
         //
-        $categorys = [];
+        $categories = [];
 
         for($i = 0; $i < 10; $i++):
             
-            $categorys[] = [
+            $categories[] = [
                 'name'=> str_random(10),
             ];
         endfor;
 
-        foreach($categorys AS $category):
+        foreach($categories AS $category):
             Category::create($category);
         endforeach;
     }
