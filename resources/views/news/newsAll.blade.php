@@ -9,9 +9,10 @@
             <a href="news/{{$new->id}}/delete" button class="btn btn-danger btn-small pull-right">Supprimer</a>
             <a href="news/{{$new->id}}/edit" button class="btn btn-success btn-small pull-right">Editer</a>
             <a href="news/{{$new->id}}" button class="btn btn-primary btn-small pull-right">Lire</a>
-            
+
           </div>
             <div class="panel-body">
+              <img src="{{ asset('image/' . $new->picture)}}"/>
               <h2>Titre :{{ $new->title }}</h2>
               <h4>Sous-titre : {{ $new->subtitle }}</h4>
               <h4>Pseudo : {{ $new->pseudo }}</h4>

@@ -10,6 +10,7 @@
             <a href="{{ url('/home/news') }}" button class="btn btn-primary btn-small pull-right">Retour</a>
           </div>
             <div class="panel-body">
+            <img src="{{ asset('image/' . $news->picture)}}"/>
               <h2>Titre :{{ $news->title }}</h2>
               <h4>Sous-titre : {{ $news->subtitle }}</h4>
               <h4>Pseudo : {{ $news->pseudo }}</h4>

@@ -28,7 +28,7 @@ class UserController extends Controller
         if($usertypeid == 1):
             return view('users.users',['users' => $users]);
         else:
-            return("Vous n'avez pas accés a ces informations car vous êtes pas admins");
+            return("Vous n'avez pas accés a ces informations car vous êtes pas admin");
         endif;    
     }
 
@@ -37,8 +37,14 @@ class UserController extends Controller
         return view('users.user');
     }
 
-    public function new(){
-        return view('users.user-form');
+    public function new()
+    {$usertypeid = Auth::user()->profile_type_id;
+        if($usertypeid == 1):
+            return view('users.user-form');
+        else:
+            return("Vous n'avez pas accés a ces informations car vous êtes pas admin");
+        endif; 
+        
     }
 
     public function create(Request $request){
