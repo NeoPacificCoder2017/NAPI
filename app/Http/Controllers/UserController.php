@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use App\User;
 use App\NewActu;
+use App\ProfileType;
 
 
 class UserController extends Controller
@@ -25,6 +26,8 @@ class UserController extends Controller
         // return view('users.users', ['users' => $users]);
         
         $usertypeid = Auth::user()->profile_type_id;
+        // $profile_type = ProfileType::all();
+        $users = User::all();
         if($usertypeid == 1):
             return view('users.users',['users' => $users]);
         else:

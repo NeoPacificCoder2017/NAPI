@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use App\NewActu;
 
 class NewController extends Controller
@@ -15,14 +16,16 @@ class NewController extends Controller
 
 
     public function all(){
+        $user = Auth::user();
         $news = NewActu::all();
-        return view('news.newsAll', ['news' => $news]);
+        return view('news.newsAll', ['news' => $news,'user' => $user]);
   
     }
 
     public function show($newsId){
+        $user = Auth::user();
         $news = NewActu::find($newsId);
-        return view('news.new', ['news' => $news]);
+        return view('news.new', ['news' => $news,'user' => $user]);
     }
 
     public function new(){
@@ -32,7 +35,7 @@ class NewController extends Controller
     public function create(Request $request){
         $input = $request->all();
         $news = new NewActu();
-        $news ->pseudo = $input['pseudo'];
+        $news ->user_id = Auth::id();
         $news ->title = $input['title'];
         $news ->subtitle = $input['subtitle'];
         $news ->categorie = $input['categorie'];
@@ -42,6 +45,7 @@ class NewController extends Controller
         // $news ->published_by = $input['published_by'];
         $news ->save();
 
+        // return back('news.news')->with('success', 'News has been added');
         return view('news.new-create-confirmation');
     }
 

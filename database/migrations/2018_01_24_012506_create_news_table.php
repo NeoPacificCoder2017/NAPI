@@ -15,7 +15,7 @@ class CreateNewsTable extends Migration
     {
         Schema::create('new_actus', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('pseudo');
+            $table->integer('user_id');
             $table->string('title');
             $table->string('subtitle');
             $table->string('categorie');

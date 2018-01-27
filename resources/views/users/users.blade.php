@@ -1,6 +1,7 @@
+@extends('users.template')
 @extends('layouts.app')
 
-@section('content')
+@section('contenu')
   <div class="container">
     <div class="col-sm-12">
 	  <div class="panel panel-info">
@@ -16,7 +17,6 @@
             <th>Profile_type_id</th>
             <th>Birthday</th>
             <th>Email</th>
-            <th>Password</th>
             <th>Actions</th>
           </tr>
         </thead>
@@ -31,7 +31,7 @@
               <td>{{ $user->profile_type_id }}</td>
               <td>{{ $user->birthday }}</td>
               <td>{{ $user->email }}</td>
-              <td>{{ $user->password }}</td>
+              {{--  <td>{{ $profile_type->name }}</td>  --}}
                 <td>
                   <a href="user/{{$user->id}}/edit" button class="btn btn-success btn-small btn-detail">Edit</a>
                   <a href="user/{{$user->id}}/delete" button class="btn btn-danger btn-small btn-delete">Delete</a>

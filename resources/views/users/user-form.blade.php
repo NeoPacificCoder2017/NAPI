@@ -1,13 +1,13 @@
-@extends('users.template')
+@extends('layouts.app')
 
-@section('contenu')
+@section('content')
   <div class="container">
     <div class="row justify-content-center">
     <div class="col-sm-offset-4 col-sm-5">
       <div class="panel panel-success">
         <div class="panel-heading">Ajouter un nouvel utilisateur</div>
           <div class="panel-body">
-            {!! Form::open(['url' => 'user']) !!}
+            {!! Form::open(['url' =>'/home/user']) !!}
             <label>Votre nom</label>{!! Form::text('lastname', null, ['class' => 'form-control', 'placeholder' => 'nom']) !!}<br/>
             <label>Votre prenom</label>{!! Form::text('firstname', null, ['class' => 'form-control', 'placeholder' => 'prénom']) !!}<br/>
             <label>Votre pseudo</label>{!! Form::text('pseudo', null, ['class' => 'form-control', 'placeholder' => 'pseudo']) !!}<br/>

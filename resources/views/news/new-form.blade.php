@@ -6,7 +6,6 @@
     <div class="panel-heading">Une nouvel actualitée</div>
       <div class="panel-body">
       {!! Form::open(['url' => 'home/news']) !!}
-      <label>Pseudo</label>{!! Form::text('pseudo', null, ['class' => 'form-control', 'placeholder' => 'pseudo']) !!}<br/>
       <label>titre</label>{!! Form::text('title', null, ['class' => 'form-control', 'placeholder' => 'titre']) !!}<br/>
       <label>sous-titre</label>{!! Form::text('subtitle', null, ['class' => 'form-control', 'placeholder' => 'sous-titre']) !!}<br/>
       <label>catégorie</label>{!! Form::text('categorie', null, ['class' => 'form-control', 'placeholder' => 'catégorie']) !!}<br/>

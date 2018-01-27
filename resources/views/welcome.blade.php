@@ -80,7 +80,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    NAPI <br/>le blog rapide
+                    NAPI <br/>l'actualité plus rapide
                 </div>
             </div>
         </div>
