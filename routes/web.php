@@ -20,7 +20,8 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('comments','newCommentController@all');
-Route::get('comments/edit','newCommentController@edit');
 Route::get('comments/new','newCommentController@new');
 Route::get('comments/{messageId}','newCommentController@show');
 Route::post('comment','newCommentController@create');
+Route::get('comments/{messageId}/edit','newCommentController@edit');
+Route::get('comments/{messageId}/delete','newCommentController@destroy');

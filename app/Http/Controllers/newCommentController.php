@@ -9,11 +9,14 @@ class newCommentController extends Controller
 {
     //
     public function all(){
-
-        $comments = newComment::all();
-        
-        
+        // $comments = newComment::all();
+        $new_id = NewActu()->id;
+        $comment_id = newComment()->new_id;
+        if($new_id == $comment_id):
         return view('comments.Comments',['comments' => $comments]);
+        else:
+        return("vous comment pas la bonne actualité");
+        endif;
     }
 
     // public function getAllActivated(){
@@ -31,9 +34,9 @@ class newCommentController extends Controller
     public function show($commentId) {
 
         $comments = newComment::find($commentId);
-        dump($comments);
+        //dump($comments);
 
-        return view('comments.Comment',['comments'=>$comments]);
+        return view('comments.Comment', ['comments' => $comments]);
     }
 
     public function new(){
@@ -48,7 +51,7 @@ class newCommentController extends Controller
         $comments->user_id = $input['user_id'];
         $comments->comment = $input['comment'];
         $comments->save();
-        return view('comments.Comment-form',['comments'=>$comments]);
+        return view('comments.Comment-form',['comments' => $comments]);
     }
 
     public function create(Request $request){
