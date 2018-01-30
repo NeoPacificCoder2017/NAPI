@@ -8,7 +8,7 @@
       {!! Form::open(['url' => 'home/news']) !!}
       <label>titre</label>{!! Form::text('title', null, ['class' => 'form-control', 'placeholder' => 'titre']) !!}<br/>
       <label>sous-titre</label>{!! Form::text('subtitle', null, ['class' => 'form-control', 'placeholder' => 'sous-titre']) !!}<br/>
-      <label>catégorie</label>{!! Form::text('categorie', null, ['class' => 'form-control', 'placeholder' => 'catégorie']) !!}<br/>
+      <label>catégorie</label>{!! Form::number('category_id', null, ['class' => 'form-control']) !!}<br/>
       <label>votre actualité</label>{!! Form::textarea('content', null, ['class' => 'form-control', 'placeholder' => '']) !!}<br/>
       <label>image</label>{!! Form::file('picture', null, ['class' => 'form-control', 'placeholder' => '']) !!}<br/>
       {{--  <label>publier</label>{!! Form::number('publish', null, ['class' => 'form-control', 'placeholder' => '']) !!}<br/>

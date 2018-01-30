@@ -14,7 +14,7 @@
             <th>Lastname</th>
             <th>Firstname</th>
             <th>Pseudo</th>
-            <th>Profile_type_id</th>
+            <th>Profile_type</th>
             <th>Birthday</th>
             <th>Email</th>
             <th>Actions</th>
@@ -28,10 +28,9 @@
               <td>{{ $user->lastname }}</td>
               <td>{{ $user->firstname }}</td>
               <td>{{ $user->pseudo }}</td>
-              <td>{{ $user->profile_type_id }}</td>
+              <td>{{ $user->profile_type_id}}</td>
               <td>{{ $user->birthday }}</td>
               <td>{{ $user->email }}</td>
-              {{--  <td>{{ $profile_type->name }}</td>  --}}
                 <td>
                   <a href="user/{{$user->id}}/edit" button class="btn btn-success btn-small btn-detail">Edit</a>
                   <a href="user/{{$user->id}}/delete" button class="btn btn-danger btn-small btn-delete">Delete</a>

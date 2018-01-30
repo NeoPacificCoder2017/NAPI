@@ -8,8 +8,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use App\User;
-use App\NewActu;
-use App\ProfileType;
+
 
 
 class UserController extends Controller
@@ -21,15 +20,16 @@ class UserController extends Controller
 
 
     public function all(){
+        // $profile_type = Auth::user();
         // $users = User::all();
         // // dump($users);
-        // return view('users.users', ['users' => $users]);
+        // return view('users.users', ['users' => $users ,'profile_type' => $profile_type]);
         
         $usertypeid = Auth::user()->profile_type_id;
-        // $profile_type = ProfileType::all();
+        $profile_type = Auth::user();
         $users = User::all();
         if($usertypeid == 1):
-            return view('users.users',['users' => $users]);
+            return view('users.users',['users' => $users ,'profile_type' => $profile_type]);
         else:
             return("Vous n'avez pas accés a ces informations car vous êtes pas admin");
         endif;    
@@ -56,7 +56,7 @@ class UserController extends Controller
         $users ->lastname = $input['lastname'];
         $users ->firstname = $input['firstname'];
         $users ->pseudo = $input['pseudo'];
-        $users ->profile_type_id = $input['profile_type_id'];
+        $users ->profile_type_id = Auth::id();
         $users ->birthday = $input['birthday'];
         $users ->email = $input['email'];
         $users ->password = bcrypt($input['password']);

@@ -17,6 +17,7 @@ class NewController extends Controller
 
     public function all(){
         $user = Auth::user();
+        $category = Auth::user();
         $news = NewActu::all();
         return view('news.newsAll', ['news' => $news,'user' => $user]);
   
@@ -38,7 +39,7 @@ class NewController extends Controller
         $news ->user_id = Auth::id();
         $news ->title = $input['title'];
         $news ->subtitle = $input['subtitle'];
-        $news ->categorie = $input['categorie'];
+        $news ->category_id = Auth::id();
         $news ->content = $input['content'];
         $news ->picture = $input['picture'];
         // $news ->publish = $input['publish'];

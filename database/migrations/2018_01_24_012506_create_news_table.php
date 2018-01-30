@@ -18,7 +18,7 @@ class CreateNewsTable extends Migration
             $table->integer('user_id');
             $table->string('title');
             $table->string('subtitle');
-            $table->string('categorie');
+            $table->integer('category_id');
             $table->text('content');
             $table->string('picture');
             // $table->integer('publish');
