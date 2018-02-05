@@ -8,9 +8,9 @@
        <p>{{ \Session::get('success') }}</p>
      </div><br />
     @endif  --}}
-      <div class="col-lg-offset-3 col-lg-8">
+      <div class="col-lg-offset-2 col-lg-8">
         <div class="panel panel-info">
-          <div class="panel-heading">Catégorie : {{ $new->category_id }}
+          <div class="panel-heading">Catégorie : {{ $category ->name }}
             @if ($user->id == $new->user_id || $user->profile_type_id == 1 ) <a href="news/{{$new->id}}/delete" button class="btn btn-danger btn-small pull-right">Supprimer</a> @endif
              @if ($user->id == $new->user_id || $user->profile_type_id == 1) <a href="news/{{$new->id}}/edit" button class="btn btn-success btn-small pull-right">Editer</a> @endif
             <a href="news/{{$new->id}}" button class="btn btn-primary btn-small pull-right">Lire</a>

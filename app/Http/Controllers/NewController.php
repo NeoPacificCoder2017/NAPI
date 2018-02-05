@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\NewActu;
+use App\Categories;
 
 class NewController extends Controller
 {
@@ -19,7 +20,7 @@ class NewController extends Controller
         $user = Auth::user();
         $category = Auth::user();
         $news = NewActu::all();
-        return view('news.newsAll', ['news' => $news,'user' => $user]);
+        return view('news.newsAll', ['news' => $news,'user' => $user, 'category' => $category]);
   
     }
 

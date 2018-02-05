@@ -7,7 +7,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use App\Http\Resources\UserResource;
 use App\User;
+use App\ProfileType;
 
 
 
@@ -18,7 +20,13 @@ class UserController extends Controller
       $this->middleware('auth');
   }
 
-
+    public function index(){
+            $users = User::paginate(15); 
+           return UserResouce::collection($users);
+           
+    }
+  
+    // Partie pour affichage web
     public function all(){
         // $profile_type = Auth::user();
         // $users = User::all();
