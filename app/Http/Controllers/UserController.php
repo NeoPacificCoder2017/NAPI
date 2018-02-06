@@ -64,9 +64,9 @@ class UserController extends Controller
 
     public function APIdestroy($id)
     {
-        $userapis = User::findOrFail($id);
-        if($userapis->delete()){
-       return new UserResources($userapis);
+        $users = User::findOrFail($id);
+        if($users->delete()){
+       return new UserResources($users);
         }
     }
   

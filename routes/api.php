@@ -17,6 +17,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+/////////////////////////////////////Route API users///////////////////////////////////
+
 Route::get('users', 'UserController@APIall');
 
 Route::get('users/{id}', 'UserController@APIshow');
@@ -26,3 +28,15 @@ Route::post('users', 'UserController@APIstore');
 Route::put('users', 'UserController@APIstore');
 
 Route::delete('users/{id}', 'UserController@APIdestroy');
+
+//////////////////////////////////////Route API news/////////////////////////////////////
+
+Route::get('news', 'NewController@APIall');
+
+Route::get('news/{id}', 'NewController@APIshow');
+
+Route::post('news', 'NewController@APIstore');
+
+Route::put('news', 'NewController@APIstore');
+
+Route::delete('news/{id}', 'NewController@APIdestroy');
