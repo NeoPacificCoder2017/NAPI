@@ -19,11 +19,10 @@ class UserResource extends Resource
             'lastname' => $this->lastname,
             'firstname' => $this->firstname,
             'pseudo' => $this->pseudo,
-            'profile_id' => $this->profile_id,
+            'profile_type_id' => $this->profile_type_id,
             'birthday' => $this->birthday,
             'email' => $this->email,
             'created_at' => $this->created_at,
-            'updated_at' => $this->updated_at,
         ];
     }
 }
